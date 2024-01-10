@@ -1,0 +1,47 @@
+body {
+    font-size: 12px;
+    background-color: #282a36;
+    color: #f8f8f2;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.code {
+    background-color: #282a36;
+    border: 1px solid #44475a;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.code pre {
+    margin: 0;
+    white-space: pre-wrap;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    color: #f8f8f2;
+}
+
+.dracula-keyword {
+    color: #ff79c6;
+}
+
+.dracula-function {
+    color: #bd93f9;
+}
+
+.dracula-string {
+    color: #f1fa8c;
+}
+
+.dracula-comment {
+    color: #6272a4;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}

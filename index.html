@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Python Compiler</title>
+    <!-- Tambahkan link Bootstrap CSS di sini -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h5>Python Encrypt :</h5>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="code">
+                    <pre>
+<span class="dracula-function">def</span> <span class="dracula-comment">decrypt</span>(<span class="dracula-string">encrypted_text</span>):
+    <span class="dracula-keyword">key</span> = "<span class="dracula-comment">@dicky-alfansyah</span>"
+    <span class="dracula-keyword">decrypted_text</span> = ""
+    <span class="dracula-keyword">key_index</span> = 0
+
+    <span class="dracula-keyword">for</span> <span class="dracula-variable">char</span> <span class="dracula-keyword">in</span> <span class="dracula-string">encrypted_text</span>:
+        <span class="dracula-variable">unicode_val</span> = <span class="dracula-function">ord</span>(<span class="dracula-variable">char</span>)
+        <span class="dracula-variable">key_val</span> = <span class="dracula-function">ord</span>(<span class="dracula-keyword">key</span>[<span class="dracula-keyword">key_index</span> % <span class="dracula-function">len</span>(<span class="dracula-keyword">key</span>)])
+        <span class="dracula-variable">xor_val</span> = <span class="dracula-variable">unicode_val</span> - 12353
+        <span class="dracula-variable">xor_val</span> = <span class="dracula-variable">xor_val</span> ^ <span class="dracula-variable">key_val</span>
+        <span class="dracula-variable">decrypted_char</span> = <span class="dracula-function">chr</span>(<span class="dracula-variable">xor_val</span>)
+        <span class="dracula-keyword">decrypted_text</span> += <span class="dracula-variable">decrypted_char</span>
+        <span class="dracula-keyword">key_index</span> += 1
+    <span class="dracula-keyword">return</span> <span class="dracula-keyword">decrypted_text</span>
+
+<span class="dracula-function">def</span> <span class="dracula-comment">main</span>():
+    <span class="dracula-variable">encrypted_text</span> = "<span class="dracula-string">おゅてきぞそぎべいごもちぇがさぅァてごかげすゆも坉</span>"
+    <span class="dracula-variable">decrypted_text</span> = <span class="dracula-function">decrypt</span>(<span class="dracula-variable">encrypted_text</span>)
+
+    <span class="dracula-function">print</span>(<span class="dracula-variable">decrypted_text</span>)
+
+<span class="dracula-keyword">if</span> __name__ == "__main__":
+    <span class="dracula-comment">main</span>()
+                    </pre>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <br />
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="runPython()">
+                        Run
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="clearOutput()">
+                        Clear
+                    </button>
+                </div>
+
+                <h5>
+                    <span>Teks Decrypt :</span>
+                    <span id="output"></span>
+                </h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tambahkan link Bootstrap JS di sini -->
+    <script src="script.js"></script>
+</body>
+
+</html>
